@@ -3,9 +3,13 @@
     "wp:up": "docker compose up -d && google-chrome --profile-directory='Default' http://localhost:8080/",
     "wp:down": "docker compose down",
     "ssg": "./ssg.sh",
-    "preview": "npx serve dist"
+    "preview": "npx serve dist",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
