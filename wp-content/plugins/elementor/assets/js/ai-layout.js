@@ -1754,7 +1754,7 @@ var BulbIcon = _react.default.forwardRef(function (props, ref) {
     height: "22",
     viewBox: "0 0 22 22",
     fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "https://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("g", {
     clipPath: "url(#clip0_10743_8902)"
   }, /*#__PURE__*/_react.default.createElement("path", {
@@ -6915,7 +6915,7 @@ async function ensureSVGSymbols(clone, options) {
     }
     const nodes = Object.values(processedDefs);
     if (nodes.length) {
-        const ns = 'http://www.w3.org/1999/xhtml';
+        const ns = 'https://www.w3.org/1999/xhtml';
         const svg = document.createElementNS(ns, 'svg');
         svg.setAttribute('xmlns', ns);
         svg.style.position = 'absolute';
@@ -7671,7 +7671,7 @@ const uuid = (() => {
     // generate uuid for className of pseudo elements.
     // We should not use GUIDs, otherwise pseudo elements sometimes cannot be captured.
     let counter = 0;
-    // ref: http://stackoverflow.com/a/6248722/2519373
+    // ref: https://stackoverflow.com/a/6248722/2519373
     const random = () => 
     // eslint-disable-next-line no-bitwise
     `0000${((Math.random() * 36 ** 4) << 0).toString(36)}`.slice(-4);
@@ -7811,7 +7811,7 @@ async function svgToDataURL(svg) {
         .then((html) => `data:image/svg+xml;charset=utf-8,${html}`);
 }
 async function nodeToDataURL(node, width, height) {
-    const xmlns = 'http://www.w3.org/2000/svg';
+    const xmlns = 'https://www.w3.org/2000/svg';
     const svg = document.createElementNS(xmlns, 'svg');
     const foreignObject = document.createElementNS(xmlns, 'foreignObject');
     svg.setAttribute('width', `${width}`);
@@ -8246,7 +8246,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           var err = new Error(
             'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
             'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
+            'Read more at https://fb.me/use-check-prop-types'
           );
           err.name = 'Invariant Violation';
           throw err;
@@ -8692,7 +8692,7 @@ if (true) {
   var ReactIs = __webpack_require__(/*! react-is */ "../node_modules/prop-types/node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
+  // https://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else // removed by dead control flow
@@ -10601,7 +10601,7 @@ allow_protocol_relative_urls - if set to true protocol relative URLs will be all
 allow_fragments - if set to false isURL will return false if fragments are present.
 allow_query_components - if set to false isURL will return false if query components are present.
 disallow_auth - if set to true, the validator will fail if the URL contains an authentication
-                component, e.g. `http://username:password@example.com`
+                component, e.g. `https://username:password@example.com`
 validate_length - if set to false isURL will skip string length validation. `max_allowed_length`
                   will be ignored if this is set as `false`.
 max_allowed_length - if set, isURL will not allow URLs longer than the specified value (default is
@@ -10672,7 +10672,7 @@ function isURL(url, options) {
 
     // Check if what follows looks like authentication credentials (user:password@host)
     // rather than a protocol. This happens when:
-    // 1. There's no `//` after the colon (protocols like `http://` have this)
+    // 1. There's no `//` after the colon (protocols like `https://` have this)
     // 2. There's an `@` symbol before any `/`
     // 3. The part before `@` contains only valid auth characters (alphanumeric, -, _, ., %, :)
     var starts_with_slashes = after_colon.slice(0, 2) === '//';
@@ -10718,7 +10718,7 @@ function isURL(url, options) {
         }
       }
     } else {
-      // Starts with '//', this is definitely a protocol like http://
+      // Starts with '//', this is definitely a protocol like https://
       url = cleanUpProtocol(potential_protocol);
       if (url === false) {
         return false;

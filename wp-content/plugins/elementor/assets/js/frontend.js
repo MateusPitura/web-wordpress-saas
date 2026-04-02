@@ -1779,7 +1779,7 @@ var EventManager = function () {
 
   /**
    * Use an insert sort for keeping our hooks organized based on priority. This function is ridiculously faster
-   * than bubble sort, etc: http://jsperf.com/javascript-sort
+   * than bubble sort, etc: https://jsperf.com/javascript-sort
    *
    * @param {Array<*>} hooks The custom array containing all of the appropriate hooks to perform an insert sort on.
    * @private
@@ -1815,7 +1815,7 @@ var EventManager = function () {
       context
     };
 
-    // Utilize 'prop itself' : http://jsperf.com/hasownproperty-vs-in-vs-undefined/19
+    // Utilize 'prop itself' : https://jsperf.com/hasownproperty-vs-in-vs-undefined/19
     var hooks = STORAGE[type][hook];
     if (hooks) {
       // TEMP FIX BUG

@@ -1780,7 +1780,7 @@ function createDOMPurify() {
   const getParentNode = lookupGetter(ElementPrototype, 'parentNode');
   // As per issue #47, the web-components registry is inherited by a
   // new document created via createHTMLDocument. As per the spec
-  // (http://w3c.github.io/webcomponents/spec/custom/#creating-and-passing-registries)
+  // (https://w3c.github.io/webcomponents/spec/custom/#creating-and-passing-registries)
   // a new empty registry is used when creating a template contents owner
   // document, so we use that as our parent document to ensure nothing
   // is inherited.
@@ -1944,9 +1944,9 @@ function createDOMPurify() {
   /* Attributes safe for values like "javascript:" */
   let URI_SAFE_ATTRIBUTES = null;
   const DEFAULT_URI_SAFE_ATTRIBUTES = addToSet({}, ['alt', 'class', 'for', 'id', 'label', 'name', 'pattern', 'placeholder', 'role', 'summary', 'title', 'value', 'style', 'xmlns']);
-  const MATHML_NAMESPACE = 'http://www.w3.org/1998/Math/MathML';
-  const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
-  const HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
+  const MATHML_NAMESPACE = 'https://www.w3.org/1998/Math/MathML';
+  const SVG_NAMESPACE = 'https://www.w3.org/2000/svg';
+  const HTML_NAMESPACE = 'https://www.w3.org/1999/xhtml';
   /* Document namespace */
   let NAMESPACE = HTML_NAMESPACE;
   let IS_EMPTY_INPUT = false;
@@ -2285,7 +2285,7 @@ function createDOMPurify() {
     }
     if (PARSER_MEDIA_TYPE === 'application/xhtml+xml' && NAMESPACE === HTML_NAMESPACE) {
       // Root of XHTML doc must contain xmlns declaration (see https://www.w3.org/TR/xhtml1/normative.html#strict)
-      dirty = '<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>' + dirty + '</body></html>';
+      dirty = '<html xmlns="https://www.w3.org/1999/xhtml"><head></head><body>' + dirty + '</body></html>';
     }
     const dirtyPayload = trustedTypesPolicy ? trustedTypesPolicy.createHTML(dirty) : dirty;
     /*
@@ -2461,7 +2461,7 @@ function createDOMPurify() {
     }
     /* Allow valid data-* attributes: At least one character after "-"
         (https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes)
-        XML-compatible (https://html.spec.whatwg.org/multipage/infrastructure.html#xml-compatible and http://www.w3.org/TR/xml/#d0e804)
+        XML-compatible (https://html.spec.whatwg.org/multipage/infrastructure.html#xml-compatible and https://www.w3.org/TR/xml/#d0e804)
         We don't need to check the value; it's always URI safe. */
     if (ALLOW_DATA_ATTR && !FORBID_ATTR[lcName] && regExpTest(DATA_ATTR, lcName)) ; else if (ALLOW_ARIA_ATTR && regExpTest(ARIA_ATTR, lcName)) ; else if (EXTRA_ELEMENT_HANDLING.attributeCheck instanceof Function && EXTRA_ELEMENT_HANDLING.attributeCheck(lcName, lcTag)) ; else if (!ALLOWED_ATTR[lcName] || FORBID_ATTR[lcName]) {
       if (
@@ -3232,7 +3232,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           var err = new Error(
             'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
             'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
+            'Read more at https://fb.me/use-check-prop-types'
           );
           err.name = 'Invariant Violation';
           throw err;
@@ -3678,7 +3678,7 @@ if (true) {
   var ReactIs = __webpack_require__(/*! react-is */ "../node_modules/prop-types/node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
+  // https://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else // removed by dead control flow

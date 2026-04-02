@@ -692,4 +692,4 @@
   !*** ./packages/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/uriTemplate.js ***!
   \****************************************************************************************/
 
-/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
+/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: https://github.com/garycourt/uri-js */

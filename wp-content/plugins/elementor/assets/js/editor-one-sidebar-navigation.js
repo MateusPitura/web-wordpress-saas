@@ -892,7 +892,7 @@ var EditorIcon = function EditorIcon(props) {
     viewBox: "0 0 22 22",
     fill: "none"
   }, props), /*#__PURE__*/_react.default.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg"
+    xmlns: "https://www.w3.org/2000/svg"
   }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M16.8622 12.1197V4.74246C16.8621 2.70533 15.2107 1.05396 13.1735 1.05396H4.74246C2.70535 1.05398 1.05398 2.70535 1.05396 4.74246V14.2274C1.05396 16.2645 2.70533 17.916 4.74246 17.916H12.1197C12.4107 17.916 12.6466 18.152 12.6466 18.443C12.6465 18.734 12.4107 18.9698 12.1197 18.9698H4.74246C2.12329 18.9698 0 16.8465 0 14.2274V4.74246C2.28646e-05 2.1233 2.1233 2.21612e-05 4.74246 0H13.1735C15.7927 2.60738e-07 17.916 2.12329 17.916 4.74246V12.1197C17.916 12.4107 17.68 12.6466 17.389 12.6466C17.098 12.6465 16.8622 12.4107 16.8622 12.1197Z",
     fill: "black",
@@ -4082,7 +4082,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           var err = new Error(
             'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
             'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
+            'Read more at https://fb.me/use-check-prop-types'
           );
           err.name = 'Invariant Violation';
           throw err;
@@ -4528,7 +4528,7 @@ if (true) {
   var ReactIs = __webpack_require__(/*! react-is */ "../node_modules/prop-types/node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
+  // https://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
   module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "../node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else // removed by dead control flow

@@ -859,7 +859,7 @@ async function ensureSVGSymbols(clone, options) {
     }
     const nodes = Object.values(processedDefs);
     if (nodes.length) {
-        const ns = 'http://www.w3.org/1999/xhtml';
+        const ns = 'https://www.w3.org/1999/xhtml';
         const svg = document.createElementNS(ns, 'svg');
         svg.setAttribute('xmlns', ns);
         svg.style.position = 'absolute';
@@ -1615,7 +1615,7 @@ const uuid = (() => {
     // generate uuid for className of pseudo elements.
     // We should not use GUIDs, otherwise pseudo elements sometimes cannot be captured.
     let counter = 0;
-    // ref: http://stackoverflow.com/a/6248722/2519373
+    // ref: https://stackoverflow.com/a/6248722/2519373
     const random = () => 
     // eslint-disable-next-line no-bitwise
     `0000${((Math.random() * 36 ** 4) << 0).toString(36)}`.slice(-4);
@@ -1755,7 +1755,7 @@ async function svgToDataURL(svg) {
         .then((html) => `data:image/svg+xml;charset=utf-8,${html}`);
 }
 async function nodeToDataURL(node, width, height) {
-    const xmlns = 'http://www.w3.org/2000/svg';
+    const xmlns = 'https://www.w3.org/2000/svg';
     const svg = document.createElementNS(xmlns, 'svg');
     const foreignObject = document.createElementNS(xmlns, 'foreignObject');
     svg.setAttribute('width', `${width}`);
